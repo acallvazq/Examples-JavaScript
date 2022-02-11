@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>La Culinaria</title>
+<meta charset="UTF-8">
+<link rel="icon" 
+      type="image/png" 
+      href="http://download.seaicons.com/icons/icons8/windows-8/512/Food-Vegan-Food-icon.png">
+
+<style>
+	/*Botón reiniciar*/
+.reiniciar {
+	-moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #cf866c;
+	box-shadow:inset 0px 1px 0px 0px #cf866c;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f53905), color-stop(1, #bc3315));
+	background:-moz-linear-gradient(top, #f53905 5%, #bc3315 100%);
+	background:-webkit-linear-gradient(top, #f53905 5%, #bc3315 100%);
+	background:-o-linear-gradient(top, #f53905 5%, #bc3315 100%);
+	background:-ms-linear-gradient(top, #f53905 5%, #bc3315 100%);
+	background:linear-gradient(to bottom, #f53905 5%, #bc3315 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f53905', endColorstr='#bc3315',GradientType=0);
+	background-color:#f53905;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #942911;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #854629;
+}
+.reiniciar:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bc3315), color-stop(1, #f53905));
+	background:-moz-linear-gradient(top, #bc3315 5%, #f53905 100%);
+	background:-webkit-linear-gradient(top, #bc3315 5%, #f53905 100%);
+	background:-o-linear-gradient(top, #bc3315 5%, #f53905 100%);
+	background:-ms-linear-gradient(top, #bc3315 5%, #f53905 100%);
+	background:linear-gradient(to bottom, #bc3315 5%, #f53905 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bc3315', endColorstr='#f53905',GradientType=0);
+	background-color:#bc3315;
+}
+.reiniciar:active {
+	position:relative;
+	top:1px;
+}
+
+/*Boton calcular*/
+.calcular {
+	-moz-box-shadow:inset 0px 1px 0px 0px #3dc21b;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #3dc21b;
+	box-shadow:inset 0px 1px 0px 0px #3dc21b;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #9bebaf), color-stop(1, #72a852));
+	background:-moz-linear-gradient(top, #9bebaf 5%, #72a852 100%);
+	background:-webkit-linear-gradient(top, #9bebaf 5%, #72a852 100%);
+	background:-o-linear-gradient(top, #9bebaf 5%, #72a852 100%);
+	background:-ms-linear-gradient(top, #9bebaf 5%, #72a852 100%);
+	background:linear-gradient(to bottom, #9bebaf 5%, #72a852 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#9bebaf', endColorstr='#72a852',GradientType=0);
+	background-color:#9bebaf;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #2f6627;
+}
+.calcular:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #72a852), color-stop(1, #9bebaf));
+	background:-moz-linear-gradient(top, #72a852 5%, #9bebaf 100%);
+	background:-webkit-linear-gradient(top, #72a852 5%, #9bebaf 100%);
+	background:-o-linear-gradient(top, #72a852 5%, #9bebaf 100%);
+	background:-ms-linear-gradient(top, #72a852 5%, #9bebaf 100%);
+	background:linear-gradient(to bottom, #72a852 5%, #9bebaf 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#72a852', endColorstr='#9bebaf',GradientType=0);
+	background-color:#72a852;
+}
+.calcular:active {
+	position:relative;
+	top:1px;
+}
+
+
+
+body{
+background-color: #F5DEB3;
+}
+
+#header{
+position:absolute;
+top: 0; 
+left: 0;
+top: 0;
+right:0;
+}
+
+header{
+background-image: url("https://hdwallsource.com/img/2015/9/food-wallpaper-47145-48661-hd-wallpapers.jpg");
+height:500px;
+
+}
+
+h1 {
+font-family: system-ui;
+color: rgb(0, 179, 60);
+text-align:center;
+font-size: 85px;
+margin: 0 auto;
+
+}
+
+
+h2{
+color: #E74C3C;
+font-family: "calibri", Garamond, 'Comic Sans';
+letter-spacing: 1px;
+text-align:center;
+}
+
+
+
+h3{
+color:rgb(128,0,0);
+text-align: center;
+text-decoration: none;
+font-size: 32px; 
+font-family: times, serif;
+
+}
+
+
+p{
+text-align:justify;
+margin:0 auto;
+width:100%;
+font-family: Arial;
+letter-spacing:1px;
+font-size:17px;
+}
+
+
+.cuadro{ 
+width:500px; 
+height:500px; 
+font-family:arial; 
+font-weight:bold; 
+color:#EEEEEE; 
+float: right;
+background-color: rgba(0, 0, 0, 0.5);
+
+} 
+
+article{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+#diseñotabla tr:nth-child(even){
+	background-color: #E8E8E8;
+	}
+
+#diseñotabla {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 75%;
+    margin:10px auto;
+    text-align: center;
+    background-color:white;
+    
+}
+
+#diseñotabla  td, #diseñotabla  th {
+    border: 1px solid black;
+    padding: 8px;
+    
+}
+
+
+
+
+#diseñotabla  th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    font-size: 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    
+}
+
+img{
+
+
+  width: 80%;
+  height: auto;
+  height: 200px;
+	
+}
+
+
+.container {
+	
+  position: relative;
+  width: 40%;
+}
+
+
+
+.overlay {
+  background-color: rgba(254, 152, 118,0.8);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 98%;
+  width: 40%;
+  opacity: 0;
+  transition: .5s ease;
+  float:left;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+  width: 30%;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+
+
+#tablaT { 
+	display : none; 
+	}
+	
+#tablaB { 
+	display : none; 
+	}
+#boloñesaimage{
+	float:right;
+
+	
+}
+#brownieimage{
+	float:none;
+	}
+
+</style>
+</head>
+
+<body>
+	<div id="header">
+  <header>
+  	
+  	<div class="cuadro"><h1>LA CULINARIA</h1><h2>"Cocinar es un arte"</h2>  </div> 
+  	
+  </header>
+
+
+
+<h3>Calculadora de Recetas</h3>
+<article>
+<p>Hoy les traigo una especie de "calculadora" que os ayudará a calcular la porciones de ingredientes de una receta según la cantidad de personas que vayan a comer.</p>
+<p>Para empezar, <strong>haz click en una de las siguientes recetas</strong> y <strong>escribe abajo la cantidad de personas que van a comer</strong>. Finalmente haz click en el botón calcular.  </p>
+<br>
+
+<a href="#tablaT"><div class="container" onclick="boloñesaimagen()" id="boloñesaimage">
+<img src="https://t1.uc.ltmcdn.com/images/4/6/1/img_como_hacer_salsa_bolonesa_7164_600.jpg" />
+<div class="overlay">
+    <div class="text">Tallarines a la Boloñesa</div>
+  </div>
+  </div>
+</a>
+
+<a href="#tablaB"><div class="container" onclick="brownieimagen()" id="brownieimage">
+<img src="https://unareceta.com/wp-content/uploads/2016/08/receta-brownie-con-nueces.jpg" />
+<div class="overlay">
+    <div class="text">Brownie de nueces</div>
+  </div>
+</div>
+</a>
+<br><br>
+
+<b>Cantidad de personas</b>
+<input type="text" id="personas" value="" style="border: 1px solid #393939;
+   border-radius: 5px 5px 5px 5px;
+   color: #393939;
+   font-size: 12px;
+   padding: 5px;">
+
+<button onclick="Calcular()" class="calcular">Calcular</button>
+
+<button onclick= "Reiniciar()" class="reiniciar">Reiniciar</button><br><br>
+
+
+
+<script>
+	function Reiniciar(){
+   
+		}
+		
+	function Calcular(){
+	
+  var personas = document.getElementById("personas").value;
+    /* Tabla de los Tallarines*/
+    document.getElementById("tallarines").innerHTML = (400*personas)/4 + " gr";
+    document.getElementById("carne picada").innerHTML = (500*personas)/4 + " gr";
+    document.getElementById("zanahorias").innerHTML = (2*personas)/4 + " unidades";
+    document.getElementById("cebolla").innerHTML = (1*personas)/4 + " unidades";
+    document.getElementById("rama de apio").innerHTML = (1*personas)/4 + " unidades";
+    document.getElementById("salsa tomate").innerHTML = (500*personas)/4 + " mL";
+    document.getElementById("vino").innerHTML = (100*personas)/4 + " ml";
+    /* Tabla del Brownie*/
+    document.getElementById("chocolate").innerHTML = (120*personas)/2 + " gr";
+    document.getElementById("mantequilla").innerHTML = (120*personas)/2 + " gr";
+    document.getElementById("huevos").innerHTML = (2*personas)/2 + " unidades";
+    document.getElementById("azucar").innerHTML = (60*personas)/2 + " gr";
+    document.getElementById("harina").innerHTML = (40*personas)/2 + " gr";
+    document.getElementById("nueces").innerHTML = (60*personas)/2 + " gr";
+    document.getElementById("cacao").innerHTML = (20*personas)/2 + " gr";
+}
+function boloñesaimagen(){
+	  //Aquí se muestra la tabla del Tallarines y la tabla de Brownie se oculta//
+	  document.getElementById("tablaB").style.display="none";
+	  document.getElementById("tablaT").style.display="block";
+	
+}
+
+
+
+function brownieimagen(){
+      //Aquí se muestra la tabla del Brownie y la tabla de Tallarines se oculta// 
+	  
+		document.getElementById("tablaT").style.display = "none";
+  	    document.getElementById("tablaB").style.display = "block";
+}
+
+
+</script>
+<div id="tablaT" name="tablaT">
+<table id ="diseñotabla">
+  <tr>
+    <th>Ingredientes</th>
+    <th>Cantidad</th>
+  </tr>
+  <tr>
+    <td>Tallarines</td>
+    <td id="tallarines">100 gr</td>
+    
+  </tr>
+  <tr>
+    <td>Carne picada</td>
+    <td id="carne picada">125 gr</td>
+    
+  </tr>
+  <tr>
+    <td>Zanahorias</td>
+    <td id="zanahorias">0.5 unidades</td>
+    
+  </tr>
+  <tr>
+    <td>Cebollas</td>
+    <td id="cebolla">0.25 unidad</td>
+    
+  </tr>
+  <tr>
+    <td>Ramas de apio</td>
+    <td id="rama de apio">0.25 unidad</td>
+    
+  </tr>
+  <tr>
+    <td>Salsa de tomate</td>
+    <td id="salsa tomate">125 ml</td>
+    
+  </tr>
+  <tr>
+    <td>Vino Blanco</td>
+    <td id="vino">25 ml</td>
+        
+  </tr>
+  <tr>
+    <td>Aceite virgen extra, sal, albahaca, perejil, pimiento</td>
+    <td></td>
+    
+  </tr>
+</table>
+</div>
+
+<div id="tablaB">
+<table id ="diseñotabla">
+  <tr>
+    <th>Ingredientes</th>
+    <th>Cantidad</th>
+  </tr>
+  <tr>
+    <td>Chocolate 70%</td>
+    <td id="chocolate">60 gr</td>
+    
+  </tr>
+  <tr>
+    <td>Mantequilla</td>
+    <td id="mantequilla">60 gr</td>
+    
+  </tr>
+  <tr>
+    <td>Huevos</td>
+    <td id="huevos">1 unidades</td>
+    
+  </tr>
+  <tr>
+    <td>Azúcar</td>
+    <td id="azucar">30 gr</td>
+    
+  </tr>
+  <tr>
+    <td>Harina</td>
+    <td id="harina">20 gr</td>
+    
+  </tr>
+  <tr>
+    <td>Nueces</td>
+    <td id="nueces">30 gr</td>
+    
+  </tr>
+  <tr>
+    <td>Cacao Amargo</td>
+    <td id="cacao">10 gr</td>
+        
+  </tr>
+  <tr>
+    <td>Aceite de oliva, sal</td>
+    <td></td>
+    
+  </tr>
+</table>
+</div>
+</article>
+
+
+</body>
+</html>

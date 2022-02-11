@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Factura</title>
+<meta charset="UTF-8">
+<link rel="icon" type="image/png" href="http://icons.iconarchive.com/icons/paomedia/small-n-flat/256/light-bulb-icon.png" />
+
+<style>
+
+body{
+background: linear-gradient(to right, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); 
+}
+
+.titulo {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  border: none;
+  font: normal 90px "copse", Helvetica, sans-serif;
+  color: rgba(255,255,255,0.7);
+  text-align: center;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  text-shadow: 3px 2px 6px rgba(0,0,0,1) ;
+  -webkit-transform: rotateY(-5.15662015617741deg)   ;
+  transform: rotateY(-5.15662015617741deg)   ;
+}
+.input {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 10px 20px;
+  border: 1px solid #b7b7b7;
+  -webkit-border-radius: 13px;
+  border-radius: 13px;
+  font: normal 16px/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,142,198,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(249,255,234,1);
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.3) , 4px 4px 7px 2px rgba(0,0,0,0.2) inset, 1px 1px 0 0 rgba(0,0,0,0.5) inset;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.3) , 4px 4px 7px 2px rgba(0,0,0,0.2) inset, 1px 1px 0 0 rgba(0,0,0,0.5) inset;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+.button {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px dashed #018dc4;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal medium/normal Arial, Helvetica, sans-serif;
+  color: rgba(33,31,31,0.9);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: rgba(199,235,249,0.9);
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) ;
+  text-shadow: 1px 1px 0 rgba(180,180,180,0.7) ;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.button:hover {
+  border: 1px dashed #007cad;
+  color: rgba(255,255,255,0.9);
+  background: rgba(150,189,204,1);
+  -webkit-box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.3) ;
+  box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.3) ;
+  text-shadow: -1px -1px 0 rgba(15,73,168,0.66) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.button:active {
+  border: 1px dashed #018dc4;
+  background: #a0c7d6;
+  -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2) inset;
+  box-shadow: 0 1px 4px 0 rgba(0,0,0,0.2) inset;
+  -webkit-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 50ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+img {
+height: 300px;
+width: 550px;
+}
+
+#solucion {
+display: none;
+}
+
+h2{
+ font-family: verdana;
+ font-size: 26px;
+}
+
+p{
+font-family: Arial;
+font-size:17px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 75%;
+	margin: 0 auto;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(odd){background-color: #cecece}
+tr:nth-child(even){background-color: #eaeaea}
+
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #666666;
+    color: white;
+	font-size: 20px;
+	
+}
+
+#resumen{
+display:none;
+}
+
+</style>
+</head>
+
+<body>
+
+
+<article>
+	
+	<h1 class="titulo">Factura de la luz</h1>
+	<script type="text/javascript" script-name="copse" src="http://use.edgefonts.net/copse.js"></script>
+	
+	<p>La factura de la luz es la principal preocupación que tienen todos los usuarios de suministro eléctrico y por eso os dejamos el siguiente 
+	formulario para que lo relleneis y así poder calcular el precio de la factura haciendo click en el botón calcular.</p>
+	<p>Os dejamos varias opciones para que elijais la potencia que teneis contratada. En el campo de <strong>Nº dias</strong> teneis que introducir
+	la cantidad de días de facturación y en el campo de <strong> energía consumida</strong> la cantidad de energía consumida durante esos días en kWh.</p>
+	<p style="text-align:center; font-size: 28px;"><strong>Formulario:</strong></p>
+	
+		Potencia contratada:<br>
+		<select id="contratada">    
+      		<option value="2.3">2.3 kW</option>
+			<option value="3.45">3.45 kW</option>
+			<option value="4.6"selected="selected">4.6 kW</option>
+			<option value="5.75">5.75 kW</option>
+			<option value="6.9">6.9 kW</option>
+			<option value="8.05">8.05 kW</option>
+		</select><br><br>
+		Nº dias: <br><input type="number" class="input" value="" id="dias"> <br><br>
+		Energia consumida: <br><input type="number" class="input" value="" id="consumida"> kWh <br><br>
+		<a href="#resumen"><button class="button" onclick="Calcular()">Calcular</button></a>
+	
+<br><br>
+<table>
+	<tr>
+		<th colspan="2"><strong>Resumen de la factura</strong></th>
+	
+	</tr>
+ 
+	<tr>
+		<td>Precio por energía consumida</td>
+		<td id="energia">0,139 €/kWh</td>
+	</tr>
+ 
+	<tr>
+		<td>Precio anual por potencia contratada</td>
+		<td id="potencia">38,043426 €/kW</td>
+	</tr>
+ 
+	<tr>
+		<td>Importe de Bono Social</td>
+		<td id="bono">0,025 €/día</td>
+	</tr>
+
+	<tr>
+		<td>Porcentaje del impuesto de electricidad</td>
+		<td id="impuesto">5,11269%</td>
+	</tr>
+
+	<tr>
+		<td>Precio del alquiler del contador</td>
+		<td id="contador">0,02663 €/día</td>
+	</tr>
+
+	<tr>
+		<td>Porcentaje de IVA</td>
+		<td id="iva">21%</td>
+	</tr>
+	
+	<tr>
+		<td><strong>Total Importe</strong></td>
+		<td id="total"></td>
+	</tr>
+</table><br>
+
+<div id="resumen">
+	<h2 style="text-align:center"> Resumen detallado</h2>
+	<p><strong>• Facturación por electricidad utilizada</strong></p>
+	<p style="color:grey">Detalle del cálculo del coste según la energía utilizada:</p>
+	<p id="energiar"></p>
+	<p><strong>• Facturación por potencia contratada</strong></p>
+	<p style="color:grey">Detalle del cálculo del coste según la potencia contratada:</p>
+	<p id="potenciar"></p>
+	<p><strong>• Otros conceptos</strong></p>
+	<p style="color:grey">Bono Social:</p>
+	<p id="bonor"></p>
+	<p><strong>• Impuesto de electricidad</strong></p>
+	<p style="color:grey">Detalle del cálculo del coste del impuesto:</p>
+	<p id="impuestor"></p>
+	<p><strong>• Alquiler del contador</strong></p>
+	<p style="color:grey">Detalle del cálculo del coste del alquiler del contador:</p>
+	<p id="alquiler"></p>
+	<p><strong>• IVA y total</strong></p>
+	<p style="color:grey">Detalle del cálculo del IVA:</p>
+	<p id="ivar"></p>
+	<p style="color:grey">Detalle del cálculo del Total:</p>
+	<p id="totar"></p>
+
+</div>
+<script>
+function Calcular(){
+	var contratada = document.getElementById("contratada").value; 
+	var consumida = document.getElementById("consumida").value; 
+	var dias = document.getElementById("dias").value; 
+	if(consumida !="" && contratada !="" && dias !=""){
+		document.getElementById("resumen").style.display = "block";
+		var energia = (consumida * 0.139).toFixed(2); //Precio por energía consumida//
+			document.getElementById("energia").innerHTML = energia + " €"; 
+			document.getElementById("energiar").innerHTML = consumida + " kWh" + " x 0,139 €/kWh = " + energia + " €"; 
+		
+		var potencia = (contratada * 38.043426 * (dias/365)).toFixed(2); //Precio anual por potencia contratada//
+			document.getElementById("potencia").innerHTML = potencia + " €";
+			document.getElementById("potenciar").innerHTML = contratada + " x 38,043426 €/kW y año x (" + dias +"/365) dias = " + potencia  + " €";
+		
+		var bono = (0.025 * dias).toFixed(2);
+			document.getElementById("bono").innerHTML = bono + " €";
+			document.getElementById("bonor").innerHTML = dias + " dias x 0,025 €/día = " + bono + " €";
+		
+		
+		var impuesto = ((parseFloat(energia) + parseFloat(potencia) + parseFloat(bono)) * (5.11269 / 100)).toFixed(2);
+			document.getElementById("impuesto").innerHTML = impuesto + " €";
+			document.getElementById("impuestor").innerHTML = parseFloat(energia) + parseFloat(potencia) + parseFloat(bono) + " x 0,02663 €/día = " + impuesto;
+			
+	
+		var contador = (0.02663 * dias).toFixed(2);
+			document.getElementById("contador").innerHTML = contador + " €";
+			document.getElementById("alquiler").innerHTML = dias +" dias x 0,02663 €/día = " + contador + " €";
+	
+	
+		var iva = ((parseFloat(energia) + parseFloat(potencia) + parseFloat(bono) + parseFloat(impuesto) + parseFloat(contador)) * (21 / 100)).toFixed(2);
+			document.getElementById("iva").innerHTML = iva + " €";
+			document.getElementById("ivar").innerHTML = parseFloat(energia) + parseFloat(potencia) + parseFloat(bono) + parseFloat(impuesto) + parseFloat(contador) + " x 21% = " + iva + " €";
+
+	
+		var total = parseFloat(energia) + parseFloat(potencia) + parseFloat(bono) + parseFloat(impuesto) + parseFloat(contador) + parseFloat(iva);
+			document.getElementById("total").innerHTML = total + " €";
+			document.getElementById("totar").innerHTML = energia + " + " + potencia + " + " + bono + " + " + impuesto + " + " + contador + " + " + iva + " = " + total + " €";
+
+	} else{
+	alert("Por favor, rellene todos los campos");
+	}	
+}
+
+	
+
+</script>
+
+
+
+
+
+
+</article>
+
+
+</body>
+</html>

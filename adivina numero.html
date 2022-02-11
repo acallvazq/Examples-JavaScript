@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Grifo</title>
+<meta charset="UTF-8">
+
+<style>
+
+body{
+background: rgba(232,181,230,1);
+background: -moz-linear-gradient(left, rgba(232,181,230,1) 0%, rgba(202,191,224,1) 48%, rgba(178,144,240,1) 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, rgba(232,181,230,1)), color-stop(48%, rgba(202,191,224,1)), color-stop(100%, rgba(178,144,240,1)));
+background: -webkit-linear-gradient(left, rgba(232,181,230,1) 0%, rgba(202,191,224,1) 48%, rgba(178,144,240,1) 100%);
+background: -o-linear-gradient(left, rgba(232,181,230,1) 0%, rgba(202,191,224,1) 48%, rgba(178,144,240,1) 100%);
+background: -ms-linear-gradient(left, rgba(232,181,230,1) 0%, rgba(202,191,224,1) 48%, rgba(178,144,240,1) 100%);
+background: linear-gradient(to right, rgba(232,181,230,1) 0%, rgba(202,191,224,1) 48%, rgba(178,144,240,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e8b5e6', endColorstr='#b290f0', GradientType=1 );
+}
+
+
+
+h1 {
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    font-size: 3em;
+    letter-spacing: 1px;
+    
+}
+.enjoy-css {
+  class="support css-property">-webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: crosshair;
+  border: none;
+  font: normal 72px/normal "Passero One", Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  text-shadow: 0 1px 0 rgba(58,47,47,1) , 0 2px 0 rgba(201,112,112,1) , 0 3px 0 rgb(187,187,187) , 0 4px 0 rgb(185,185,185) , 0 5px 0 rgb(170,170,170) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 5px 10px rgba(0,0,0,0.247059) , 0 10px 10px rgba(0,0,0,0.2) , 0 20px 20px rgba(0,0,0,0.14902) ;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.enjoy-css:hover {
+  color: rgba(203,68,221,1);
+  text-shadow: 0 1px 0 rgba(255,255,255,1) , 0 2px 0 rgba(255,255,255,1) , 0 3px 0 rgba(255,255,255,1) , 0 4px 0 rgba(255,255,255,1) , 0 5px 0 rgba(255,255,255,1) , 0 6px 1px rgba(0,0,0,0.0980392) , 0 0 5px rgba(0,0,0,0.0980392) , 0 1px 3px rgba(0,0,0,0.298039) , 0 3px 5px rgba(0,0,0,0.2) , 0 -5px 10px rgba(0,0,0,0.247059) , 0 -7px 10px rgba(0,0,0,0.2) , 0 -15px 20px rgba(0,0,0,0.14902) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -webkit-transform: rotateX(32.0856365273261deg)   ;
+  transform: rotateX(32.0856365273261deg)   ;
+}
+
+h2{
+color: #E74C3C;
+font-family: "calibri", Garamond, 'Comic Sans';
+letter-spacing: 1px;
+text-align:center;
+}
+
+
+
+h3{
+color:rgb(128,0,0);
+text-align: center;
+text-decoration: none;
+font-size: 32px; 
+font-family: times, serif;
+
+}
+
+
+p{
+text-align:justify;
+margin:0 auto;
+width:100%;
+font-family: Arial;
+letter-spacing:1px;
+font-size:17px;
+line-height: 30px;
+color: #fff;
+margin-bottom: 2em;
+}
+  
+article{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+ 
+
+
+nav{
+background: rgb(178, 50, 178);
+
+height:36px;
+position:absolute;
+top: 0; 
+left: 0;
+top: 0;
+right:0;
+
+}
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+  margin-left: 15px;
+  
+}
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+  background-color: purple;
+}
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+/*style items (options):*/
+.select-items {
+  position: absolute;
+  background-color: pink;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+.select-items div:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.input {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 6px 20px;
+  border: none;
+  -webkit-border-radius: 32px / 54px;
+  border-radius: 32px / 54px;
+  font: normal 18px/normal "Coda", Helvetica, sans-serif;
+  color: rgba(0,142,198,1);
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: rgba(252,252,252,1);
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2) inset;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2) inset;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.66) ;
+  -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+  }
+
+.input:hover {
+  background: rgba(232,249,255,1);
+  -webkit-box-shadow: 0 2px 2px 0 rgba(90,90,90,0.2) inset;
+  box-shadow: 0 2px 2px 0 rgba(90,90,90,0.2) inset;
+}
+
+.input:focus {
+  background: rgba(255,253,232,1);
+}
+
+.jugar {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  margin: 30px 0 0;
+  padding: 0 60px;
+  border: 1px solid #710f99;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal 25px/60px "Questrial", Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: -webkit-linear-gradient(-90deg, rgba(186,85,150,1) 0, rgba(145,53,136,1) 100%), rgba(186,85,155,1);
+  background: -moz-linear-gradient(180deg, rgba(186,85,150,1) 0, rgba(145,53,136,1) 100%), rgba(186,85,155,1);
+  background: linear-gradient(180deg, rgba(186,85,150,1) 0, rgba(145,53,136,1) 100%), rgba(186,85,155,1);
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0,0,0,0.3) ;
+  box-shadow: 0 2px 1px 0 rgba(0,0,0,0.3) ;
+  text-shadow: 0 1px 2px rgba(102,40,112,1) ;
+}
+
+.jugar:hover {
+  border: 1px solid #760f99;
+  background: rgba(183,84,155,1);
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.11) ;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.11) ;
+  text-shadow: 0 1px 2px rgba(112,40,103,1) ;
+  -webkit-transition: all 150ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 150ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 150ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 150ms cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.jugar:active {
+  border: 1px solid rgba(180,180,180,0.2);
+  background: rgba(165,74,155,1);
+  -webkit-box-shadow: 0 3px 0 0 rgba(0,0,0,0.1) inset;
+  box-shadow: 0 3px 0 0 rgba(0,0,0,0.1) inset;
+  text-shadow: 0 1px 2px rgba(90,40,112,1) ;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+</style>
+</head>
+
+<body>
+
+
+<article>
+	
+	<h1 class="enjoy-css">Adivina el numero</h1>
+
+	<p id="traducir">El grifo​ es una criatura mitológica, cuya parte superior es la de un águila gigante, con plumas doradas, afilado pico y poderosas garras. La parte inferior es la de un león, con pelaje amarillo, musculosas patas y cola larga.</p>
+	<input type="number" class="input" value="" placeholder="Introduzca nº intentos" id="intento">
+	<link async href="http://fonts.googleapis.com/css?family=Coda" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/><br>
+	<input type="button" class="jugar" value="Jugar" onclick="Aleatorio()" />
+	<input type="button" class="jugar" value="Reset" onclick="Aleatorio()" />
+<link async href="http://fonts.googleapis.com/css?family=Questrial" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+<input type="number" class="input" value="" placeholder="Ingrese numero" id="numero">
+<p id="resultado"></p>	
+<script>
+		
+	function Aleatorio(){
+		var intento = document.getElementById("intento").value;
+		var resultado = Math.random()*100;
+		var redondeo = Math.round(resultado);
+		var numero = document.getElementById("numero").value;
+		
+		if (numero > redondeo){
+		 alert("Te has pasado amigo");
+		 document.getElementById("resultado").innerHTML = redondeo;
+		}
+		
+		else if (numero < redondeo){
+		  alert("Te has quedado corto");
+		  document.getElementById("resultado").innerHTML = redondeo;
+		}		
+		else if (numero == redondeo){
+		  alert("Felicidades!! Has acertado");
+		  document.getElementById("resultado").innerHTML = redondeo;
+		}
+		else{
+		document.getElementById("resultado").innerHTML = redondeo;}
+		}
+		
+</script>
+
+
+
+
+</script>
+
+</article>
+
+
+</body>
+</html>

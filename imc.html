@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Salud</title>
+<meta charset="UTF-8">
+<link rel="icon" 
+      type="image/png" 
+      href="https://cdn.pixabay.com/photo/2016/04/09/16/08/icon-1318316_960_720.png">
+
+<style>
+	
+body{
+background: linear-gradient(to right, rgba(206,255,189,1) 16%, rgba(187,244,185,1) 26%, rgba(113,201,169,1) 66%, rgba(135,199,245,1) 98%, rgba(135,199,245,1) 100%);
+
+
+}
+
+
+header{
+background-image: url("https://cdn.pixabay.com/photo/2012/04/12/20/46/caduceus-30591_960_720.png");
+background-repeat: no-repeat;
+height:300px;
+width: 600px;
+margin: 0 auto;
+
+}
+
+h1 {
+font-family: system-ui;
+color: rgb(0, 179, 60);
+text-align:center;
+font-size: 50px;
+margin: 0 auto;
+
+
+}
+
+
+h2{
+color:rgb(128,0,0);
+font-family: times, serif;
+padding: 1em;
+text-align:center;
+font-size: 32px; 
+}
+
+
+
+
+
+h3{
+color:#3D9BF9;
+text-align: center;
+text-decoration: none;
+font-size: 26px; 
+font-family: times, serif;
+
+}
+
+
+p{
+text-align:justify;
+margin:0 auto;
+width:100%;
+font-family: Arial;
+letter-spacing:1px;
+font-size:17px;
+
+margin-bottom: 1em;
+}
+
+
+.cuadro{ 
+	margin-bottom: 10em;
+	margin-left: 5em;
+	margin-right: 5em;
+  background-color: rgba(156,249,204,0.5);
+   border: 5px groove #66cc66;
+ 
+
+ 
+font-family:arial; 
+font-weight:bold; 
+color:#EEEEEE; 
+
+background-color: rgba(0, 0, 0, 0.5);
+
+} 
+
+article{
+	margin-left: 5em;
+	margin-right: 5em;
+	margin-top: -10em;
+	height: 50%;
+	background-color: white;
+	}
+	
+.calcular {
+	-moz-box-shadow: 4px 3px 13px -3px #899599;
+	-webkit-box-shadow: 4px 3px 13px -3px #899599;
+	box-shadow: 4px 3px 13px -3px #899599;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
+	background:-moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:-ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background:linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+	background-color:#ededed;
+	-moz-border-radius:15px;
+	-webkit-border-radius:15px;
+	border-radius:15px;
+	border:1px solid #d6bcd6;
+	display:inline-block;
+	cursor:pointer;
+	color:#3a8a9e;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #e1e2ed;
+}
+.calcular:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab1ba), color-stop(1, #ededed));
+	background:-moz-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:-webkit-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:-o-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:-ms-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background:linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab1ba', endColorstr='#ededed',GradientType=0);
+	background-color:#bab1ba;
+}
+.calcular:active {
+	position:relative;
+	top:1px;
+}
+
+/*Barras de deslizamiento*/
+.estatura {
+    -webkit-appearance: none;
+    width: 25%;
+    height: 5px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.estatura:hover {
+    opacity: 1;
+}
+
+.estatura::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+.estatura::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+}
+
+
+.peso {
+    -webkit-appearance: none;
+    width: 25%;
+    height: 5px;
+    border-radius: 5px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.peso:hover {
+    opacity: 1;
+}
+
+.peso::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #AE70ED;
+    cursor: pointer;
+}
+
+.peso::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #AE70ED;
+    cursor: pointer;
+
+
+
+</style>
+</head>
+	
+  <header>
+  	
+  	  	
+  </header>
+    <div class="cuadro"><h1> ♣ Cuide su salud ♣</h1>  </div> 
+
+<body>
+	<article>
+		<h2>• Calcular IMC</h2>
+		<p>Para determinar si una persona está por encima de su peso ideal o es demasiado delgada se utiliza el IMC o Índice de Masa Corporal, también conocido como BMI (Body Mass Index) o IQ (Índice de Quetelet).</p>
+		<p>El cálculo es relativamente simple: consiste en dividir el peso, expresado en kilos, entre la estatura, en metros, elevada al cuadrado (kg/m2). El IMC resultante te indica si el peso es correcto en función de esa estatura, o si eres demasiado bajo o elevado.</p>
+		<center>
+		<img src="http://www.mundiblue.com/consultoria/wp-content/uploads/2017/08/IMC.jpg" width="600" >
+		</center>
+		<p><strong>Atención:</strong> El IMC es sólo un indicador y no se debe considerar como un diagnóstico sin tener en cuenta otros factores.</p>
+		<p>Más abajo, les ofrecemos el cálculo del Índice de Masa Corporal mediante nuestra calculadora de la salud.</p>
+		<p> Simplemente introduzca su altura y peso en sus casillas correspondientes y, a continuación, presione el botón Calcular</p>
+		Estatura <input type="range" min="140" max="220" value="" class="estatura" id="estatura"> <span id="cm"></span> cm
+		<br>
+		Peso <input type="range" min="20" max="400" value="" class="peso" id="peso"> <span id="Kg"></span> Kg
+		<br>
+			
+
+		<button onclick="Calcular()" class="calcular">Calcular IMC</button>
+		<br><br>
+		
+			<h3 id="h3"></h3>
+			<p id= "r"></p>
+			<p id="consejo"></p>
+					
+	
+	</article>
+	
+	<script>
+		function Calcular() {
+		
+			/* variables para la calculadora*/
+			var peso = document.getElementById("peso").value;
+			var estatura = document.getElementById("estatura").value;
+			var estaturametros = estatura/100;
+			var resultado = peso/(estaturametros * estaturametros);	
+						
+			/* Variables para la solución*/
+			var h3 =  document.getElementById("h3");
+			var p1 = document.getElementById("r"); 
+			var consejo = document.getElementById("consejo"); 
+						
+			
+			
+			/* Función calcular*/
+			if(resultado < 18.5){
+         
+          h3.innerHTML = "Bajo peso";
+          p1.innerHTML = "Su imc es: " + resultado.toFixed(2) + " Kg/m²";
+          consejo.innerHTML = "Teniendo en cuenta tu estatura, tu peso es insuficiente. Te conviene engordar un poco. A veces, es suficiente con aumentar el consumo de alimentos ricos en calorías como frutos secos, añadir mayonesa o salsas a los platos, tomar quesos curados y premiarse de vez en cuando con un dulce o un helado, sin privarse de nada. Deberías ir al médico para ver si hay alguna razón para estar tan delgado, sobre todo si el cambio de peso es reciente.";
+
+     }
+      else if(resultado >= 18.5 && resultado < 24.9){
+         
+          h3.innerHTML = "Normal";
+          p1.innerHTML = "Su imc es: " + resultado.toFixed(2) + " Kg/m²";
+          consejo.innerHTML = "Tienes un peso adecuado. No está justificado que quieras adelgazar. En todo caso, si no estás conforme con tu peso, aumenta un poco tu actividad física y cuida tu alimentación evitando las calorías vacías (sobre todo alcohol y dulces) y tomando una dieta variada con abundancia de fruta y verdura.Tienes el peso adecuado pero… ¿seguro que comes bien? Compruébalo con la Pirámide Alimentaria.Comprueba si comes bien."; 
+    }
+
+      else if(resultado >= 25 && resultado < 29.9) {
+          
+          h3.innerHTML = "Sobrepeso";
+          p1.innerHTML = "Su imc es: " + resultado.toFixed(2) + " Kg/m²";
+          consejo.innerHTML = "Un 20% de la población española adulta se encuentra en esta situación. Si tu peso es estable y no hay otros indicadores de enfermedades asociadas (tensión alta, colesterol...), no siempre es necesario adelgazar. Pero si te decides a adelgazar, una dieta ligeramente hipocalórica y un poco de actividad física podría ser suficiente para perder los 4 o 5 kg que le puedan sobrar. Puedes perder unos kilos sin comprometer tu salud haciendo más ejercicio y con una dieta ajustada y equilibrada: Consulta la Dieta OCU de 1500 kcal"; 
+    }
+      else if(resultado >= 30 && resultado < 39.9) {
+         
+          h3.innerHTML = "Obesidad";
+          p1.innerHTML = "Su imc es: " + resultado.toFixed(2) + " Kg/m²";
+          consejo.innerHTML = "A partir de un IMC de 30 se tiene obesidad, existe riesgo cardiovascular y de otras enfermedades, además de fatiga, sobrecarga de articulaciones, etc. No intentes adelgazar por tu cuenta: necesitas acudir a un médico para adelgazar al menos un 10% de su peso en unos 6 meses.";
+    }
+      else if (resultado > 40){
+         
+          h3.innerHTML = "Obesidad Mórbida";
+          p1.innerHTML = "Su imc es: " + resultado.toFixed(2) + " Kg/m²";
+          consejo.innerHTML = "A partir de un IMC de 30 se tiene obesidad, existe riesgo cardiovascular y de otras enfermedades, además de fatiga, sobrecarga de articulaciones, etc. No intentes adelgazar por tu cuenta: necesitas acudir a un médico para adelgazar al menos un 10% de su peso en unos 6 meses.";
+          
+    }
+}	
+	
+	/*Valor de las barras de deslizamiento*/
+	
+	
+  var cm = document.getElementById("cm");
+  var Kg = document.getElementById("Kg");
+  cm.innerHTML = estatura.value;
+  Kg.innerHTML = peso.value;
+  
+  estatura.oninput = function() {
+  cm.innerHTML = this.value;
+}
+
+  peso.oninput = function(){
+  Kg.innerHTML = this.value;
+  }
+	</script>
+	
+</body>
+</html>

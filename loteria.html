@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Loteria</title>
+<meta charset="UTF-8">
+
+<style>
+h1{
+text-align: center;
+font-size:5vw;
+font-family: verdana;
+}
+
+h2{
+letter-spacing: 2.5px;
+text-align: center;
+font-family: arial;
+}
+
+h3{
+color: red;
+font-size:10vw;
+text-align:center;
+}
+
+button {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  margin: 30px 0 0;
+  padding: 0 60px;
+  border: 1px solid #710f99;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  font: normal 25px/60px "Questrial", Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: -webkit-linear-gradient(-90deg, rgba(186,85,150,1) 0, rgba(145,53,136,1) 100%), rgba(186,85,155,1);
+  background: -moz-linear-gradient(180deg, rgba(186,85,150,1) 0, rgba(145,53,136,1) 100%), rgba(186,85,155,1);
+  background: linear-gradient(180deg, rgba(186,85,150,1) 0, rgba(145,53,136,1) 100%), rgba(186,85,155,1);
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: auto auto;
+  background-size: auto auto;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(0,0,0,0.3) ;
+  box-shadow: 0 2px 1px 0 rgba(0,0,0,0.3) ;
+  text-shadow: 0 1px 2px rgba(102,40,112,1) ;
+}
+</style>
+</head>
+<body>
+
+<h1 id="titulo">Loteria</h1>
+
+<h2>Tiene que comprar el número: </h2>
+<h3 id="loteria"><h3>
+
+<button onclick="Refrescar()">Reiniciar</button>
+
+<script>
+loteria = Math.floor((Math.random() * 100000) + 10000);
+document.getElementById("loteria").innerHTML = loteria;
+
+function Refrescar(){
+location.reload();
+}
+
+</script>
+</body>
+</html>

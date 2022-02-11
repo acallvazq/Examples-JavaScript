@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>El mayor</title>
+<meta charset="UTF-8">
+
+<style>
+
+body{
+background-color: #F5DEB3;
+}
+
+
+
+h1 {
+font-family: system-ui;
+color: purple;
+text-align:center;
+font-size: 85px;
+margin: 0 auto;
+
+}
+
+
+h2{
+color: #E74C3C;
+font-family: "calibri", Garamond, 'Comic Sans';
+letter-spacing: 1px;
+text-align:center;
+}
+
+
+
+h3{
+color:rgb(128,0,0);
+text-align: center;
+text-decoration: none;
+font-size: 32px; 
+font-family: times, serif;
+
+}
+
+
+p{
+text-align:justify;
+margin:0 auto;
+width:100%;
+font-family: Arial;
+letter-spacing:1px;
+font-size:17px;
+}
+
+
+article{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+
+
+img{
+
+
+  width: 80%;
+  height: auto;
+  height: 200px;
+	
+}
+
+
+
+</style>
+</head>
+
+<body>
+	
+  <header>
+  	
+  	<h1>¿Cuál es el mayor?</h1> 	
+  	
+  </header>
+  
+<article>
+	Número 1: <input type="text" value="" id="n1">
+	Número 2: <input type="text" value="" id="n2">
+	Número 3: <input type="text" value="" id="n3">
+	<button onclick="Calcular()">Calcular</button>
+	<p id="resultado"></p>
+<script>
+		
+	function Calcular(){
+		
+		var n1 = document.getElementById("n1").value;
+		var n2 = document.getElementById("n2").value;
+		var n3 = document.getElementById("n3").value;
+		
+if ( n1 > n2 && n1 > n3) {
+ alert(n1);
+}
+else if (n2 > n3){
+ alert(n2);
+}
+ else if ( n3 > n2 && n3 > n1) { 
+ alert(n3);
+}
+else{
+	alert("Hay números iguales");
+}
+}
+</script>
+</script>
+
+
+
+
+</script>
+
+</article>
+
+
+</body>
+</html>

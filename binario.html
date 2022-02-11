@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Binario y Decimal</title>
+<meta charset="UTF-8">
+
+<style>
+
+body{
+background: white;
+}
+
+
+h2{
+color: White;
+font-family: "calibri", Garamond, 'Comic Sans';
+letter-spacing: 1px;
+text-align:center;
+font-size: 10em;
+}
+
+p{
+text-align:justify;
+margin:0 auto;
+width:100%;
+font-family: Arial;
+letter-spacing:1px;
+font-size:17px;
+line-height: 30px;
+color: black;
+margin-bottom: 2em;
+}
+  
+article{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+</style>
+</head>
+
+<body>
+
+	
+  <header>
+  	
+  	<h1>Los sistemas Binario y Decimal</h1>
+    
+     	
+  </header>
+  
+<article>
+	
+ 
+	
+<script>
+ var sistema = prompt("¿El número es Binario o Decimal?");
+	
+while (sistema != "Decimal" || sistema != "decimal" && sistema != "Binario" || sistema != "binario" ) {
+
+	if (sistema == "Binario" || sistema == "binario" ){
+		var numero= prompt("Introduce el número"); 
+		var resultado = parseInt(numero, 2);
+		alert(resultado);
+	break;		
+	
+	}else if (sistema == "Decimal" || sistema == "decimal" ){
+		numero= prompt("Introduce el número"); 
+		var cociente = parseInt(numero);	
+		var resto = "";
+			do{
+				resto = cociente % 2 + resto;
+				cociente = Math.floor(cociente / 2) ;
+			}while (cociente > 0);
+		alert(resto);
+	break;
+	}
+	
+	alert(sistema + " no es un sistema. Por favor especifique el sistema");
+	sistema = prompt("¿El número es Binario o Decimal?");		
+	
+}
+		
+</script>
+
+</article>
+
+
+</body>
+</html>
